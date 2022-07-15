@@ -1,0 +1,73 @@
+@import "../../styles/config/variables";
+
+.search {
+  width: 100%;
+  z-index: 5;
+  margin-top: 70px;
+
+  .box {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: $-card-shadow;
+    backdrop-filter: blur(3px);
+    padding: 36px 8px;
+
+    .formGroup {
+      .input {
+        padding: 4px 0 4px 6px;
+        width: 90%;
+      }
+
+      .iconSearch{
+        right: 4px;
+        top: -12px;
+        cursor: pointer;
+      }
+
+      button {
+        padding: 2px;
+
+        &:hover {
+          opacity: 1;
+          svg {
+            transform: none;
+          }
+        }
+      }
+
+      .label {
+        left: 6px;
+        width: 85%;
+      }
+    }
+
+    .list{
+      position: relative;
+      
+      .options{
+        position: absolute;
+        width: 90%;
+        top: -36px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 0px 0px 5px 5px;
+        height: 250px;
+        overflow: hidden;
+        overflow-y: auto;
+
+        .option{
+          padding: 12px 8px;
+          cursor: pointer;
+          font-size: 0.8rem;
+
+          &:hover{
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+  }
+}
+
+

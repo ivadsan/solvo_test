@@ -1,0 +1,40 @@
+@import "../../styles/config/variables";
+
+.weathermain {
+  width: 100%;
+
+  .box {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: $-card-shadow;
+    backdrop-filter: blur(3px);
+    padding: 36px 8px;
+    margin: 24px 0px;
+
+    .location {
+      text-align: center;
+      color: white;
+    }
+
+    .weather {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+
+      .temperature {
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+      }
+    }
+    .description {
+      text-align: center;
+      color: #fff;
+      margin-top: 12px;
+      font-size: 0.8rem;
+    }
+  }
+}

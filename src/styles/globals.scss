@@ -1,0 +1,33 @@
+@import './config/config';
+@import './components/components';
+
+html,
+body {
+  background-color: $-background;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 500px;
+  margin: auto;
+  //background: rgb(44 133 255);
+  background-image: url('../assets/background.png');
+  height: 100vh;
+  background-size: cover;
+}
+
+*{
+  box-sizing: border-box;
+}

@@ -1,0 +1,13 @@
+@import "../../styles/config/variables";
+
+.card {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 15px;
+  box-shadow: $-card-shadow;
+  backdrop-filter: blur(3px);
+  padding: 16px 8px;
+  margin: 0px 4px 24px;
+  color:white;
+  text-align: center;
+}

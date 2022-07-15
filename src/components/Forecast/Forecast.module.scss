@@ -1,0 +1,9 @@
+@import "../../styles/config/variables";
+
+.forecast {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  overflow-x: auto;
+}

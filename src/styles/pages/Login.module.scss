@@ -1,0 +1,19 @@
+@import "../config/variables";
+
+.login {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 16px;
+
+  .box {
+    background-color: rgba(0,0,0, 0.3);
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: $-card-shadow;
+    backdrop-filter: blur(3px);
+    padding: 0px 8px 36px;
+  }
+}

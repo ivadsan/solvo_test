@@ -1,0 +1,50 @@
+// Palette Color
+$-background: #1d1d1d;
+$-dark-blue: #143148;
+$-dark-gray: #8e9498;
+$-cool-gray: #a3a9ad;
+$-light-gray: #f0f2f3;
+$-rosy-pink: #bd0eb7;
+$-orange: #fd9f64;
+$-cool-blue: #646afc;
+$-green: #08e6c2;
+$-warning: #f1c40f;
+$-error: #e95a4b;
+$-black: #000;
+$-white: #fff;
+$-line-gray: #707070;
+$-opacity-13-blue: #e1e4e7;
+$-opacity-34-blue: #9ca8b1;
+$-medium-gray: #ccd0d2;
+$-yellow: #e6c408;
+
+// Settings
+$-card-shadow: 3px 6px 10px 0 rgba($-black, 38%);
+$-light-opacity: 0.07;
+$-border-radius: 5px;
+$-padding: 16px;
+$-form-width: 350px;
+
+// Z-Index
+$-z-index-0: 0;
+$-z-index-1: 1;
+$-z-index-2: 2;
+$-z-index-3: 3;
+$-z-index-4: 4;
+$-z-index-5: 5;
+$-z-index-6: 6;
+$-z-index-float-icon: 30;
+$-z-index-tooltip: 50;
+$-z-index-modal: 100;
+$-z-index-loading: 500;
+$-max-z-index: 1000;
+
+// Font
+$-main-font: 'Roboto', sans-serif;
+
+// Breakpoints
+$-mobile: 480px;
+$-tablet: 768px;
+$-notebook: 1024px;
+$-large-screen: 1200px;
+$-extra-large-screen: 1920px;

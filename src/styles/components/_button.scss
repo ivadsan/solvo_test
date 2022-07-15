@@ -1,0 +1,64 @@
+.btnDefault {
+  display: block;
+  border-radius: $-border-radius;
+  color: $-white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: $-padding / 2 $-padding;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: none;
+
+  &:hover {
+    opacity: 0.7 ;
+
+    svg {
+      transform: translate($-padding / 2, 2px) scale(1.2);
+    }
+  }
+
+  &.btnPrimary {
+    background-color: $-dark-blue;
+  }
+
+  &.btnSecondary {
+    background-color: #0c74eb;
+  }
+
+  &.btnGhostPrimary {
+    color: $-dark-blue;
+    border: 1px solid $-dark-blue;
+
+    &__disabled {
+      background-color: $-opacity-13-blue;
+      color: $-opacity-34-blue;
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &.sizeDefault {
+    font-size: 1.125rem;
+    padding: 10px 0;
+  }
+
+  &.fullSize {
+    width: 100%;
+  }
+
+  &.small {
+    font-size: 0.75rem;
+    padding: 3px 0;
+  }
+
+  .icon {
+    display: inline-block;
+    padding-left: $-padding;
+    position: relative;
+    transform: translateY(2px);
+    transition: all 0.3s ease-in-out;
+  }
+}
