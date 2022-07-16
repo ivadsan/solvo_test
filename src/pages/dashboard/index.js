@@ -10,28 +10,26 @@ function Dashboard() {
   const [current, setCurrent] = useState(null);
   const [forecast, setForecast] = useState(null);
 
+  useEffect(() => {
+    function notifyMe() {
+      if (!("Notification" in window)) {
+        alert("This browser does not support notifications");
+      } else if (Notification.permission === "granted") {
+        let notification = new Notification("Hola!");
+      } else if (
+        Notification.permission !== "denied" ||
+        Notification.permission === "default"
+      ) {
+        Notification.requestPermission(function (permission) {
+          if (permission === "granted") {
+            let notification = new Notification("Hola!");
+          }
+        });
+      }
+    }
 
-  useEffect(()=>{
-    const notification = async () => {
-      if (!('Notification' in window)) {
-        return alert('Your browser dot not support notifcations');
-      }
-  
-      if (Notification.permission === 'default') {
-        await Notification.requestPermission();
-      }
-  
-      if (Notification.permission === 'blocked') {
-        return 'You blocked notifications';
-      }
-  
-      if (Notification.permission === 'granted') {
-        return;
-      }
-    };
-
-   notification()
-  },[])
+    notifyMe();
+  }, []);
 
   return (
     <div className="container">
@@ -42,7 +40,7 @@ function Dashboard() {
         {!!forecast && (
           <>
             <Forecast forecast={forecast} />
-            <FavoriteButton current={current}/>
+            <FavoriteButton current={current} />
           </>
         )}
       </div>
