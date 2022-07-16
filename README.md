@@ -4,17 +4,17 @@ This is an app developed with the aim of demonstrating my skills as a front-end 
 
 ## Especificaciones
 
-"axios": "^0.27.2",
-"next": "12.2.2",
-"next-auth": "^4.10.0",
-"react": "18.2.0",
-"react-dom": "18.2.0",
-"react-hook-form": "^7.33.1",
-"react-icons": "^4.4.0",
-"react-select": "^5.4.0",
-"sass": "^1.53.0"
+- "axios": "^0.27.2",
+- "next": "12.2.2",
+- "next-auth": "^4.10.0",
+- "react": "18.2.0",
+- "react-dom": "18.2.0",
+- "react-hook-form": "^7.33.1",
+- "react-icons": "^4.4.0",
+- "react-select": "^5.4.0",
+- "sass": "^1.53.0"
 
-## Instalación
+## Installation
 
 Download and clone the project
 
@@ -28,7 +28,7 @@ Download and clone the project
 
 ```
 
-Installation
+install
 
 ```
   npm install
