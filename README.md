@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather app
 
-## Getting Started
+This is an app developed with the aim of demonstrating my skills as a front-end developer.
 
-First, run the development server:
+## Especificaciones
 
-```bash
-npm run dev
-# or
-yarn dev
+"axios": "^0.27.2",
+"next": "12.2.2",
+"next-auth": "^4.10.0",
+"react": "18.2.0",
+"react-dom": "18.2.0",
+"react-hook-form": "^7.33.1",
+"react-icons": "^4.4.0",
+"react-select": "^5.4.0",
+"sass": "^1.53.0"
+
+## Instalación
+
+Download and clone the project
+
+
+```
+  // with SSH
+  git clone git@github.com:ivadsan/solvo_test.git
+
+  // with HTTPS
+  git clone https://github.com/ivadsan/solvo_test.git
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Installation
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+  npm install
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Run the project locally
 
-## Learn More
+```
+  npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Review the env.example file to set the environment variables
+## Demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[See Demo](https://solvo-test.vercel.app/)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Iván Darío Sánchez Jiménez
