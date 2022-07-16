@@ -11,11 +11,14 @@ function Dashboard() {
   const [forecast, setForecast] = useState(null);
 
   useEffect(() => {
-    function notifyMe() {
+    const notifyMe =  async () => {
       if (!("Notification" in window)) {
         alert("This browser does not support notifications");
       } else if (Notification.permission === "granted") {
         let notification = new Notification("Hola!");
+        setTimeout(() => {
+          notification.close();
+      }, 10 * 1000);
       } else if (
         Notification.permission !== "denied" ||
         Notification.permission === "default"
@@ -23,6 +26,9 @@ function Dashboard() {
         Notification.requestPermission(function (permission) {
           if (permission === "granted") {
             let notification = new Notification("Hola!");
+            setTimeout(() => {
+              notification.close();
+          }, 10 * 1000);
           }
         });
       }
