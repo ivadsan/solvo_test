@@ -3,7 +3,7 @@
 .dashboard {
   margin: auto;
   width: 90%;
-  height: 100vh;
+  height: calc(100vh - 50px) ;
   display: flex;
   justify-content: flex-start;
   align-items: center;

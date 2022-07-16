@@ -8,12 +8,21 @@ import {
 import { colors } from "@/constants/config";
 import { useForm } from "react-hook-form";
 import styles from "@/styles/pages/Login.module.scss";
+import { signIn, useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 export default function SimpleContainer() {
   const [values, setValues] = useState({
     passwordValue: '',
     showPassword: false,
   });
+  const { status, loading } = useSession();
+  const router = useRouter();
+  const [error, setError] = useState(false);
+
+  if (status === 'authenticated') {
+    router.push('/dashboard');
+  }
 
   const {
     register,
@@ -23,7 +32,19 @@ export default function SimpleContainer() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (e) => {};
+  const onSubmit = async (e) => {
+
+    const username = e.username.toLowerCase()
+    
+    const { error } = await signIn('credentials', {
+      redirect: false,
+      username: username,
+      password: e.password,
+      callbackUrl: '/dashboard',
+    });
+
+    if (error) setError(true);
+  };
 
   const handlePasswordChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
@@ -54,11 +75,7 @@ export default function SimpleContainer() {
                 }`}
                 type="text"
                 {...register("username", {
-                  required: { value: true, message: "Required field" },
-                  pattern: {
-                    value: /^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$/,
-                    message: "Invalid email",
-                  },
+                  required: { value: true, message: "Required field" }
                 })}
               />
               <label htmlFor="username">Username</label>
@@ -94,6 +111,9 @@ export default function SimpleContainer() {
               <label htmlFor="password">Password</label>
               {errors.password && (
                 <span className="inputErrorMessage">Required field</span>
+              )}
+              {error && (
+                <span className="inputErrorMessage">Check credentials</span>
               )}
             </div>
             <div >
