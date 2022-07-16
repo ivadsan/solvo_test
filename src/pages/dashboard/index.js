@@ -15,7 +15,7 @@ function Dashboard() {
       if (!("Notification" in window)) {
         alert("This browser does not support notifications");
       } else if (Notification.permission === "granted") {
-        let notification = new Notification("Hola!");
+        let notification = new Notification("Weather app notification!");
         setTimeout(() => {
           notification.close();
       }, 10 * 1000);
@@ -25,7 +25,7 @@ function Dashboard() {
       ) {
         Notification.requestPermission(function (permission) {
           if (permission === "granted") {
-            let notification = new Notification("Hola!");
+            let notification = new Notification("Weather app notification!");
             setTimeout(() => {
               notification.close();
           }, 10 * 1000);
